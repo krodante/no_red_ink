@@ -1,7 +1,6 @@
 require "csv"
 
 class Output
-  KEYS = [:strand_id, :strand_name, :standard_id, :standard_name, :question_id, :difficulty]
   QUESTIONS_CSV = CSV.read("questions.csv", headers: true, header_converters: :symbol)
 
   def self.calculate_for(number)
